@@ -1,10 +1,8 @@
-import Header from "./_components/header";
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
+        <h5>Blog Page</h5>
         {children}
       </body>
     </html>
