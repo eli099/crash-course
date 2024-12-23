@@ -1,6 +1,8 @@
 import Link from "next/link";
 import SearchBar from "./SearchBar";
 
+// ! This is a server side component
+
 export default function Header() {
   return (
     <header>
@@ -9,7 +11,8 @@ export default function Header() {
       <Link href="/blog">Blog</Link>
 
       {/* Bring in SearchBar component (that is marked as a client component) */}
-      <SearchBar />
+      {/* (Don't need anymore) */}
+      {/* <SearchBar /> */} 
     </header>
   );
 }
