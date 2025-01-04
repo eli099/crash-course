@@ -12,8 +12,11 @@ async function fetchPost(id) {
         },
       }
     )
-
     const data = await response.json()
+    // route specific 404 page (just for blog page errors)
+    if (!data.title) {
+      notFound()
+    }
     return data
   } catch (error) {
     notFound()
@@ -80,4 +83,4 @@ export async function generateStaticParams() {
 }
 
 // Error catching for IDs that are out of current scope (for API)
-export const dynamicParams = false
+// export const dynamicParams = false
